@@ -139,6 +139,7 @@ main {
     display: block;
     margin: 0 auto; 
     image-rendering: auto;
+    aspect-ratio: 1 / 1;
 }
 
 #infoArticle {
