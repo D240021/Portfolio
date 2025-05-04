@@ -10,7 +10,19 @@ const projectsList = [
         image: "../assets/img/cryptorAlura.png",
         pageUrl: "https://d240021.github.io/encriptador-allura/",
         gitHubUrl: "https://github.com/D240021/encriptador-allura"
-    }
+    },
+    {
+        name: "Guitar LA",
+        description: "A simple guitar store website that allows you interact with a cart shopping.",
+        technologies: [
+            { name: "React" },
+            { name: "TailwindCSS" },
+            { name: "Vite" }
+        ],
+        image: "../assets/img/guitarLA.png",
+        pageUrl: "https://d240021.github.io/guitarLA-ts/index.html",
+        gitHubUrl: "https://github.com/D240021/guitarLA-ts/tree/main"
+    },
 ];
 
 function renderProjects(projects) {
