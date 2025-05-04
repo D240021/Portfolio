@@ -8,7 +8,8 @@ const projectsList = [
             { name: "CSS" }
         ],
         image: "../assets/img/cryptorAlura.png",
-        url: "https://d240021.github.io/encriptador-allura/"
+        pageUrl: "https://d240021.github.io/encriptador-allura/",
+        gitHubUrl: "https://github.com/D240021/encriptador-allura"
     }
 ];
 
@@ -31,7 +32,8 @@ function renderProjects(projects) {
                     ${project.technologies.map(tech => `<p>${tech.name}</p>`).join("")}
                 </div>
                 <img src="${project.image}" alt="project image" draggable="false" loading="lazy">
-                <button class="buttonsVisit" onclick="window.open('${project.url}', '_blank')">Go</button>
+                <button class="buttonsVisit" onclick="window.open('${project.pageUrl}', '_blank')">Go page</button>
+                <button class="buttonsVisit" onclick="window.open('${project.gitHubUrl}', '_blank')">Go GitHub</button>
             </div>
         `;
 
