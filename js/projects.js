@@ -30,7 +30,7 @@ function renderProjects(projects) {
                 <div class="techDiv">
                     ${project.technologies.map(tech => `<p>${tech.name}</p>`).join("")}
                 </div>
-                <img src="${project.image}" alt="project image">
+                <img src="${project.image}" alt="project image" draggable="false" loading="lazy">
                 <button class="buttonsVisit" onclick="window.open('${project.url}', '_blank')">Go</button>
             </div>
         `;
