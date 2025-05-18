@@ -75,7 +75,7 @@ const projectsList = [
         ],
         image: "",
         pageUrl: "",
-        gitHubUrl: "https://github.com/usuario/clinica-virtual-backend"
+        gitHubUrl: "https://github.com/D240021/ArbolDeSedaBackend"
     },
     {
         name: "Foro Hub Backend",
