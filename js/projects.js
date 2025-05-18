@@ -23,6 +23,18 @@ const projectsList = [
         pageUrl: "https://d240021.github.io/guitarLA-ts/index.html",
         gitHubUrl: "https://github.com/D240021/guitarLA-ts/tree/main"
     },
+    {
+        name: "Reportería ICE",
+        description: "Web application developed for fault reporting for the Costa Rican Electricity Institute (ICE).",
+        technologies: [
+            { name: 'Angular 18'},
+            { name: '.NET Entity Framework ORM'},
+            { name: 'Bootstrap CSS'}
+        ],
+        image: "../assets/img/reporteriaICE.png",
+        pageURL: "https://d240021.github.io/reporteriaICEFrontend",
+        gitHubUrl: "https://github.com/D240021/Reporteria-ICE"
+    }
 ];
 
 function renderProjects(projects) {
