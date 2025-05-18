@@ -15,7 +15,7 @@ const projectsList = [
         name: "Guitar LA",
         description: "A simple guitar store website that allows you interact with a cart shopping.",
         technologies: [
-            { name: "React" },
+            { name: "React & TS" },
             { name: "TailwindCSS" },
             { name: "Vite" }
         ],
@@ -27,8 +27,8 @@ const projectsList = [
         name: "Reportería ICE",
         description: "Web application developed for fault reporting for the Costa Rican Electricity Institute (ICE).",
         technologies: [
-            { name: 'Angular 18'},
-            { name: '.NET Entity Framework ORM'},
+            { name: 'Angular 18 & TS'},
+            { name: '.NET Entity Framework ORM & C#'},
             { name: 'Bootstrap CSS'}
         ],
         image: "../assets/img/reporteriaICE.png",
