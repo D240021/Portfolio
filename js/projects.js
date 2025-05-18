@@ -27,14 +27,76 @@ const projectsList = [
         name: "Reportería ICE",
         description: "Web application developed for fault reporting for the Costa Rican Electricity Institute (ICE).",
         technologies: [
-            { name: 'Angular 18 & TS'},
-            { name: '.NET Entity Framework ORM & C#'},
-            { name: 'Bootstrap CSS'}
+            { name: 'Angular 18 & TS' },
+            { name: '.NET Entity Framework ORM & C#' },
+            { name: 'Bootstrap CSS' }
         ],
         image: "../assets/img/reporteriaICE.png",
         pageURL: "https://d240021.github.io/reporteriaICEFrontend",
         gitHubUrl: "https://github.com/D240021/Reporteria-ICE"
+    },
+    {
+        name: "LiterAlura",
+        description: "Web application built with Java and Spring Boot for managing books and authors. Developed for an Alura + Oracle challenge.",
+        technologies: [
+            { name: "Java" },
+            { name: "Spring Boot" },
+            { name: "JPA" },
+            { name: "H2 Database" },
+            { name: "Maven" }
+        ],
+        image: "",
+        pageUrl: "",
+        gitHubUrl: "https://github.com/D240021/LiterAlura"
+    },
+    {
+        name: "Java Currency Converter",
+        description: "Console-based application developed in Java to convert between Costa Rican colón (CRC) and other currencies. Created as part of an Alura + Oracle challenge.",
+        technologies: [
+            { name: "Java" },
+            { name: "REST API" },
+            { name: "JSON Parsing" }
+        ],
+        image: "",
+        pageUrl: "",
+        gitHubUrl: "https://github.com/D240021/Conversor-de-Monedas-Java"
+    },
+    {
+        name: "Árbol de Seda Backend",
+        description: "Backend developed with Spring Boot for a virtual clinic that includes a consultation forum and virtual appointment scheduling between patients and healthcare professionals.",
+        technologies: [
+            { name: "Java 21+" },
+            { name: "Spring Boot" },
+            { name: "Spring Data JPA" },
+            { name: "Spring Security + JWT" },
+            { name: "MySQL/PostgreSQL" },
+            { name: "Hibernate" },
+            { name: "Maven" }
+        ],
+        image: "",
+        pageUrl: "",
+        gitHubUrl: "https://github.com/usuario/clinica-virtual-backend"
+    },
+    {
+        name: "Foro Hub Backend",
+        description: "REST API backend developed with Spring Boot as part of the Alura Next Education Backend Challenge. Implements a forum system where users can create, view, update, and delete topics with secure JWT authentication.",
+        technologies: [
+            { name: "Java 21+" },
+            { name: "Spring Boot" },
+            { name: "Spring Data JPA" },
+            { name: "JWT (JSON Web Tokens)" },
+            { name: "Flyway" },
+            { name: "Lombok" },
+            { name: "MySQL" },
+            { name: "Maven" }
+        ],
+        image: "",
+        pageUrl: "",
+        gitHubUrl: "https://github.com/D240021/ForoHubAlura"
     }
+
+
+
 ];
 
 function renderProjects(projects) {
@@ -43,6 +105,15 @@ function renderProjects(projects) {
     projects.forEach(project => {
         const card = document.createElement("div");
         card.classList.add("project-card");
+
+        const goPageButton = project.pageUrl
+            ? `<button class="buttonsVisit" onclick="window.open('${project.pageUrl}', '_blank')">Go page</button>`
+            : "";
+
+        const projectImage = project.image
+            ? `<img src="${project.image}" alt="project image" draggable="false" loading="lazy">`
+            : "";
+
 
         card.innerHTML = `
             <div class="project-header">
@@ -55,8 +126,8 @@ function renderProjects(projects) {
                 <div class="techDiv">
                     ${project.technologies.map(tech => `<p>${tech.name}</p>`).join("")}
                 </div>
-                <img src="${project.image}" alt="project image" draggable="false" loading="lazy">
-                <button class="buttonsVisit" onclick="window.open('${project.pageUrl}', '_blank')">Go page</button>
+                ${projectImage}
+                ${goPageButton}
                 <button class="buttonsVisit" onclick="window.open('${project.gitHubUrl}', '_blank')">Go GitHub</button>
             </div>
         `;
