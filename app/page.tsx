@@ -11,7 +11,7 @@ import { technologies } from "@/lib/utils"
 import { media } from "@/lib/utils"
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [language, setLanguage] = useState<"es" | "en">("es")
 
   useEffect(() => {
